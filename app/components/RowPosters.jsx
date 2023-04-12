@@ -17,6 +17,7 @@ export default async function RowPosters({genre,genreID}) {
             movies.map(movie => {
                return( 
                 <Image  
+                key={movie.id}
                 src={`https://image.tmdb.org/t/p/w300${ movie.backdrop_path }`}
                 alt={movie.title}
                 placeholder='blur'

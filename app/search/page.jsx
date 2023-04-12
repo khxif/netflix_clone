@@ -24,7 +24,7 @@ export default async function page({searchParams}) {
             <div className="container px-2 md:px-0 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 py-8 gap-3 md:gap-6 items-center">
             {
               movies.map((movie) => {
-                return <Card movie={movie} />
+                return <Card key={movie.id} movie={movie} />
               })
             }
             </div>
