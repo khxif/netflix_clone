@@ -14,7 +14,7 @@ export default async function RowPosters({genre,genreID}) {
         <h1 className='text-2xl font-bold'>{genre}</h1>
         <div className="flex overflow-x-scroll space-x-4 scrollbar-hide">
         {
-            movies.map(movie => {
+            movies.map((movie) => {
                return( 
                 <Image  
                 key={movie.id}
