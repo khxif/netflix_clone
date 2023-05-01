@@ -1,4 +1,5 @@
-import Header from './components/Header'
+import Header from '../components/Header'
+import SessionProvider from '../components/SessionProvider'
 import './globals.css'
 
 export const metadata = {
@@ -8,7 +9,8 @@ export const metadata = {
 
 export default function RootLayout({children}) {
   return (
-    <html lang="en">
+    <html lang="en" >
+      <link rel="icon" href="/Logo.png" />
       <body className='bg-black text-white scrollbar-hide'>
         <Header />
         {children}

@@ -1,4 +1,4 @@
-import Trailer from '../../components/Trailer'
+import Trailer from '../../../components/Trailer'
 
 export default async function page({params}) {
 

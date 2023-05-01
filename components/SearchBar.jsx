@@ -19,14 +19,14 @@ export default function SearchBar() {
     <div className="">
        <form 
        onSubmit={handleSubmit} 
-       className="flex items-center bg-white rounded-2xl py-2 px-1 md:px-3 space-x-2"
+       className="flex items-center bg-white rounded-2xl py-2 px-2 md:px-3 space-x-2 "
        >
             <input 
             type="text"
             value={searchTerm}
             placeholder="Search movies..."
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="p-1 text-red-600 font-bold focus:outline-none"
+            className="px-1 md:py-1 w-16 sm:w-28 md:w-auto text-red-600 text-xs md:text-base font-bold focus:outline-none"
             />
             <FaSearch
              className="text-red-600 text-xl cursor-pointer"

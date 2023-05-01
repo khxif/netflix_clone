@@ -8,7 +8,7 @@ export default function Trailer({id}) {
 
     const opts = {
         height: '350',
-        width: '420',
+        width: '370',
         playerVars: {
           autoplay: 0,
         },
@@ -20,7 +20,9 @@ export default function Trailer({id}) {
         {
           id && (
             <YouTube
-            videoId={id} opts={opts}
+            videoId={id} 
+            opts={opts}
+            className={'mx-auto overflow-hidden'}
             />
           )
         }

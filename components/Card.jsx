@@ -7,7 +7,7 @@ export default function Card({movie}) {
   //console.log(movie);
   return (
     <div className='space-y-2 border border-red-900 py-4 px-2  md:p-4 rounded-lg hover:shadow-md
-     hover:shadow-red-600 duration-200 hover:scale-105 transition-all'>
+     hover:shadow-red-600 duration-200 hover:scale-105 transition-all overflow-x-hidden'>
       <Link href={`/movie/${movie.id}`}>
         <Image  src={`https://image.tmdb.org/t/p/w300${ movie.backdrop_path }`}
          width={300}
