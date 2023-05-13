@@ -3,17 +3,17 @@ import Trailer from '../../../components/Trailer'
 export default async function page({params}) {
 
     const movieId = params.movieID
-    console.log(movieId);
+    //console.log(movieId);
 
-    const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${process.env.API_KEY}&language=en-US`)
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${process.env.API_KEY}&language=en-US`,{cache:'no-store'})
     const data = await res.json()
     const movie = data.results
     const movieKey = data.results[0].key
 
-    const getRes = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=en-US`)
+    const getRes = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}&language=en-US`,{cache:'no-store'})
     const getData = await getRes.json()
     const movieData = getData
-    console.log(movieData);
+    //console.log(movieData);
 
   return (
 

@@ -4,7 +4,7 @@ import React from 'react'
 
 export default async function RowPosters({genre,genreID}) {
 
-    const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${genreID}`,{ next:{revalidate:300} })
+    const res = await fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.API_KEY}&with_genres=${genreID}`,{next:{revalidate:120}})
     const data = await res.json()
     const movies = data.results
     //console.log(movies);

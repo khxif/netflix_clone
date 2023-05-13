@@ -4,7 +4,7 @@ import Card from '../../components/Card';
 export default async function page({searchParams}) {
 
     const searchedMovie = searchParams.query
-    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=en-US&query=${searchedMovie}`)
+    const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.API_KEY}&language=en-US&query=${searchedMovie}`,{cache:"no-store"})
     const data = await res.json()
     console.log(data);
     console.log(data.total_results);

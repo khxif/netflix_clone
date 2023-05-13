@@ -5,7 +5,7 @@ export default async function page({params}) {
   const category = params.category
   //console.log(category);
 
-  const res = await fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${process.env.API_KEY}&language=en-US&page=1`)
+  const res = await fetch(`https://api.themoviedb.org/3/movie/${category}?api_key=${process.env.API_KEY}&language=en-US&page=1`,{cache:'no-store'})
   const data = await res.json()
   const movies = data.results
   //console.log(movies);
