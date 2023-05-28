@@ -4,7 +4,9 @@ import { AiOutlineInfoCircle } from 'react-icons/ai'
 
 export default async function HomeBanner() {
 
-    const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}`,{next:{revalidate:120}})
+    const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.API_KEY}`,{
+      next:{revalidate:120}
+    })
     const data = await res.json();
     const movies = data.results
     const randomIndex = Math.floor(Math.random()*movies.length)

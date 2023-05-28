@@ -1,5 +1,4 @@
-import RowPosters from '../../components/RowPosters'
-import React from 'react'
+import RowPosters from '@/components/RowPosters'
 
 export default function page() {
   return (
