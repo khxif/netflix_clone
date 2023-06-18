@@ -10,9 +10,10 @@ export default function SearchBar() {
     const[searchTerm,setSearchTerm] = useState('')
     const router = useRouter()
 
-    const handleSubmit = ( e ) => {
+    const handleSubmit = (e) => {
         e.preventDefault()
         router.push(`/search?query=${searchTerm}`)
+        setSearchTerm('')
     }
 
   return (
@@ -26,7 +27,7 @@ export default function SearchBar() {
             value={searchTerm}
             placeholder="Search movies..."
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="px-1 md:py-1 w-16 sm:w-28 md:w-auto text-red-600 text-xs md:text-base font-bold focus:outline-none"
+            className="px-1 md:py-1 w-20 sm:w-28 md:w-auto text-red-600 text-xs md:text-base font-bold focus:outline-none"
             />
             <FaSearch
              className="text-red-600 text-xl cursor-pointer"
