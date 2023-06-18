@@ -23,7 +23,7 @@ export default async function page({searchParams}) {
         {
           movies && data.total_results > 0 && (
             <div className='container px-2 md:px-0 py-2 mb-6 flex flex-col space-y-6'>
-              <h1 className='font-bold text-lg md:text-2xl'>
+              <h1 className='font-bold text-lg md:text-2xl mx-auto'>
                 Showing movies : 
                 <span className='text-red-600'>
                   {' '}{searchedMovie}  
